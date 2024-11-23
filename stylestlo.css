@@ -1,0 +1,200 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+   background-color: #1e1e1e  ;
+}
+header{
+    position: fixed; /* Makes the header stick to the top */
+    top: 0;
+    left: 0;
+    z-index:1;
+    width:100%;
+    background-color: #111c06;
+    height:100px;
+    
+}
+h1{
+    text-align: center; 
+    padding:10px;
+    color:#ffc00c ;
+    width:100%;
+    font-size:50px;
+    height:65px;    
+    
+    background-color:#090a09 ;
+    
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+    padding: 40px;
+    margin: auto;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+}
+h2{
+     padding: 0px 10px 10px 20px;
+     text-align: center;  
+     color: #ffc00c;
+     font-size: 35px;
+}
+.center-content {
+    flex: 1;
+    padding: 170px 10px 20px 30px; /* Adjusted top padding to 120px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    text-align: center; 
+}
+
+.button-group {
+    /* Keep the existing styles for button grouping */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.button {
+    display: inline-block;
+    background-color: #181717;
+    color: #ffc00c ;
+    padding: 15px 120px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.button:hover {
+    background-color: #4f2323;
+    transform: scale(1.05); /* Added a slight scaling effect on hover */
+}
+a{
+    text-decoration: none;
+}
+
+
+.school-info {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    letter-spacing: 1px; ;
+    margin-top: 0px;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+/* Login Form */
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.login-button {
+    background-color: #181717;
+    color: #ffc00c;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.login-button:hover {
+    background-color: #4f2323;
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    color:#edd712;
+    background-color: #181717;
+    width: 100%;
+    min-height: 20px;
+    margin-top:auto;
+}
+
+.logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+}
+/* .school-info .byline {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 5px; /* Adjust the margin as needed 
+} */
+@media (max-width: 768px) {
+    .center-content {
+        padding: 100px 20px 20px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .button {
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .button {
+        padding: 8px 40px;
+        font-size: 14px;
+    }
+
+    .center-content {
+        padding: 80px 10px 10px 10px;
+    }
+}

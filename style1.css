@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 30px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h1, .section h2 {
+    color: #333;
+  }
+  
+  /* Button Group */
+  .button-group {
+    margin-bottom: 20px;
+  }
+  
+  .button-group .button, .button-group button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .button-group .button:hover, .button-group button:hover {
+    background-color: #45a049;
+  }
+  
+  button {
+    display: inline-block;
+  }
+  
+  a.button {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* List Styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  

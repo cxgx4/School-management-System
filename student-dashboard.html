@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+
+</head>
+<body>
+  <h1 class="dashboard-title">Student Dashboard</h1>
+    <div class="popup">
+        <div class="tabs">
+            <input type="radio" id="tab1" name="tab" checked="true" onclick="showContent('home-content')"/>
+            <label for="tab1">Home</label>
+           
+            <input type="radio" id="tab2" name="tab" onclick="showContent('calendar-content')"/>
+            <label for="tab2">Student Calendar</label>
+            <input type="radio" id="tab3" name="tab" onclick="showContent('attendance-content')"/>
+            <label for="tab3">Attendance</label>
+            <input type="radio" id="tab4" name="tab" onclick="showContent('schedule-content')" />
+            <label for="tab4">Class Schedule</label>
+            <input type="radio" id="tab5" name="tab" onclick="showContent('assignments-content')"/>
+            <label for="tab5">Assignments Due</label>
+            <input type="radio" id="tab6" name="tab" onclick="showContent('results-content')"/>
+            <label for="tab6">Results</label>
+
+            <div class="marker">
+                <div id="top"></div>
+                <div id="bottom"></div>
+            </div>
+        </div>
+        <div class="tab-content">
+          <div id="home-content" class="content-section">
+              <div class="student-info">
+                    <!-- <img src="student_image.png" alt="Student Image" class="student-image"> -->
+                    <div class="student-details">Student Information:</div>
+                    <div class="student-details"></div> <!-- For Student ID -->
+                    <div class="student-details"></div> <!-- For Name -->
+                    <div class="student-details"></div> <!-- For Roll Number -->
+                    <div class="student-details"></div> <!-- For House -->
+                    <div class="student-details"></div> <!-- For Section -->
+                    <div class="student-details"></div> <!-- For Class -->
+                </div>
+            </div>
+    
+
+            <div id="calendar-content" class="content-section" style="display:none;">
+                <h2>Student Calendar</h2>
+                <div id="calendar"></div>
+                
+                <!-- Form to add events -->
+                <h3>Add Event</h3>
+                <form id="eventForm">
+                    <label for="eventTitle">Event Title:</label>
+                    <input type="text" id="eventTitle" required>
+                    
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" required>
+                    <button type="submit">Add Event</button>
+                </form>
+            </div>
+            
+            
+
+            <div id="attendance-content" class="content-section">
+                <h2>Student's Attendance-</h2>
+                <p id="leaves">Number of leaves Taken: 10</p>
+                
+                <h3>Upcoming Holidays:</h3>
+                    <p>Diwali: 31-11-2024</p>
+                    <p>Christmas: 25-12-2024</p>
+                    <a href="./leave.html" class="button">Apply for Leave</a>
+                    <!-- <button>Apply for Leave</button> -->
+            </div>
+
+            <div id="schedule-content" class="content-section" style="display: none;">
+            <h2>Class Schedule</h2>
+            <table class="class-schedule">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Math</td>
+                        <td>English</td>
+                        <td>Science</td>
+                        <td>History</td>
+                        <td>Physical Education</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 AM - 11:15 AM</td>
+                        <td>Science</td>
+                        <td>Math</td>
+                        <td>Computer Science</td>
+                        <td>English</td>
+                        <td>Art</td>
+                    </tr>
+                    <tr>
+                        <td>11:30 AM - 12:30 PM</td>
+                        <td>History</td>
+                        <td>Physical Education</td>
+                        <td>Math</td>
+                        <td>Science</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>1:30 PM - 2:30 PM</td>
+                        <td>Computer Science</td>
+                        <td>History</td>
+                        <td>English</td>
+                        <td>Physical Education</td>
+                        <td>Science</td>
+                    </tr>
+                    <tr>
+                        <td>2:45 PM - 3:45 PM</td>
+                        <td>Art</td>
+                        <td>Science</td>
+                        <td>Physical Education</td>
+                        <td>Math</td>
+                        <td>Computer Science</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div id="assignments-content" class="content-section" style="display: none;">
+            <h2>Assignments Due</h2>
+            <table class="assignments-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Assignment Title</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math</td>
+                        <td>Algebra Homework</td>
+                        <td>2024-11-18</td>
+                        <td class="status due-soon">Due Soon</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>Lab Report</td>
+                        <td>2024-11-20</td>
+                        <td class="status completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>Essay on World War II</td>
+                        <td>2024-11-22</td>
+                        <td class="status pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>Reading Assignment</td>
+                        <td>2024-11-24</td>
+                        <td class="status not-started">Not Started</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>Project Proposal</td>
+                        <td>2024-11-25</td>
+                        <td class="status pending">Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div id="results-content" class="content-section" style="display: none;">
+            <h2>Results</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks Scored</th>
+                        <th>Max Marks</th>
+                        <th>Grade</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math</td>
+                        <td>85</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td class="remarks good">Excellent</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>78</td>
+                        <td>100</td>
+                        <td>B</td>
+                        <td class="remarks average">Good</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>92</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td class="remarks good">Outstanding</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>67</td>
+                        <td>100</td>
+                        <td>C</td>
+                        <td class="remarks average">Satisfactory</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>90</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td class="remarks good">Excellent</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

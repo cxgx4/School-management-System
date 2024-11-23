@@ -1,0 +1,697 @@
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e3d5ca;
+    font-family: monospace; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #525d6f;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.popup {
+    width: 60%;
+    height: 80%;
+    min-height: 480px; 
+    max-height: 480px; 
+    border-radius: 48px;
+    box-sizing: border-box; 
+    border: 16px solid #f5ebe0;
+    background-color: #f5ebe04f;
+    overflow: hidden;
+    box-shadow: 16px 16px 48px #2e364330; 
+}
+
+.tabs {
+    width: 100%;
+    max-width: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around; 
+    position: relative;
+}
+
+/* Rest of your CSS here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e3d5ca;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #525d6f;
+}
+
+label {
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #525d6f;
+    opacity: 0.4;
+    transition: opacity 0.4s ease-in-out;
+    display: block;
+    width: calc(100% - 48px);
+    text-align: right;
+    z-index: 100;
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label:hover, input[type="radio"]:checked + label {
+    opacity: 1;
+}
+
+.popup {
+    width: 95%;
+    height: 150%;
+    min-height: 540px;
+    max-height: 540px;
+    border-radius: 48px;
+    box-sizing: border-box;
+    border: 16px solid #f5ebe0;
+    background-color: #f5ebe04f;
+    overflow: hidden;
+    box-shadow: 16px 16px 48px #2e364330;
+    position: relative;
+    text-align: center;
+}
+
+.tabs {
+    width: 100%;
+    max-width: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* .marker {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    top: calc(-100%);
+    left: 0;
+    transition: transform 0.2s ease-in-out;
+} */
+
+/* .marker #bottom, .marker #top {
+    background-color: #f5ebe0;
+    box-shadow: 32px 32px 48px #2e364315;
+} */
+
+/* .marker #top {
+    height: calc(50%);
+    margin-bottom: auto;
+    border-radius: 0 0 32px 0;
+}
+
+.marker #bottom {
+    height: calc(50% - 82px);
+    border-radius: 0 32px 0 0;
+} */
+
+/* Adjust marker position per tab */
+/* #tab1:checked ~ .marker { transform: translateY(calc((50% / 6) * 0)); }
+#tab2:checked ~ .marker { transform: translateY(calc((50% / 6) * 1)); }
+#tab3:checked ~ .marker { transform: translateY(calc((50% / 6) * 2)); }
+#tab4:checked ~ .marker { transform: translateY(calc((50% / 6) * 3)); }
+#tab5:checked ~ .marker { transform: translateY(calc((50% / 6) * 4)); }
+#tab6:checked ~ .marker { transform: translateY(calc((51% / 6) * 5)); } */
+
+/* Tab Content Styling */
+.tab-content {
+    margin-left: 260px;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.content-section {
+    display: none;
+}
+
+#tab1:checked ~ .tab-content #home-content,
+#tab2:checked ~ .tab-content #blogs-content,
+#tab3:checked ~ .tab-content #products-content,
+#tab4:checked ~ .tab-content #about-content,
+#tab5:checked ~ .tab-content #contact-content,
+#tab6:checked ~ .tab-content #service-content {
+    display: block;
+}
+
+/* Student Image and Info */
+.student-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 18px;
+    color: #525d6f;
+    margin: 10px 0;
+}
+/* #home-content {
+    display: none; /* Initially hidden 
+} */
+#home-content {
+    display: block; /* Show the home content by default */
+}
+
+#tab1:checked ~ .tab-content #home-content {
+    display: block;
+}
+
+.student-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.student-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.student-details {
+    font-size: 28px;
+    color: #525d6f;
+    margin-bottom: 10px;
+}
+/* Event form container styling */
+#eventForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    text-align: left;
+    width: 300px;
+}
+
+#eventForm label {
+    font-size: 18px;
+    color: #525d6f;
+    margin-top: 10px;
+}
+
+#eventForm input[type="text"],
+#eventForm input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#eventForm button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #525d6f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#eventForm button:hover {
+    background-color: #3f4c60;
+}
+/* Attendance Section Styling */
+#attendance-content {
+    margin-top: 20px;
+    padding: 30px;
+    height: 450px;
+    background-color: #f5ebe0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#attendance-content h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: #525d6f;
+    margin-bottom: 60px;
+
+    
+}
+
+#attendance-content p {
+    font-size: 20px;
+    text-align: left;
+    color: #525d6f;
+    margin-bottom: 10px;
+}
+#leaves{
+    font-size:20px;
+}
+#attendance-content button {
+    background-color: #525d6f;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#attendance-content button:hover {
+    background-color: #3f4c60;
+}
+
+#attendance-content h3 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    color: #525d6f;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+.button {
+    background-color: #646564; /* Green background color */
+    color: white; /* White text color */
+    padding: 12px 20px; /* Button padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: burlywood; /* Darker green on hover */
+}
+.schedule-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    
+}
+
+.class-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.class-schedule thead {
+    background-color: #1b9a1f;
+    color: rgb(33, 31, 31);
+}
+
+.class-schedule th, .class-schedule td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid;
+   
+}
+
+.class-schedule tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* .class-schedule tbody tr:hover {
+    background-color: #f1f1f1;
+} */
+
+.class-schedule tbody td {
+    color: #333;
+}
+
+
+
+
+
+.results-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+/* Status colors */
+.status {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    
+}
+
+.status.completed {
+    background-color: #28a745; /* Green */
+}
+
+.status.pending {
+    background-color: #ffc107; /* Yellow */
+}
+
+.status.due-soon {
+    background-color: #fd7e14; /* Orange */
+}
+
+.status.not-started {
+    background-color: #dc3545; /* Red */
+}
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.results-table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+.results-table th, .results-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+/* Remarks styling */
+.remarks {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.remarks.good {
+    color: #28a745; /* Green */
+}
+
+.remarks.average {
+    color: #ffc107; /* Yellow */
+}
+
+.remarks.needs-improvement {
+    color: #dc3545; /* Red */
+}
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+.assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.assignments-table thead {
+    background-color: #007BFF;
+    color: white;
+    
+}
+
+.assignments-table th, .assignments-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+}
+
+.assignments-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    
+}
+.pie-chart-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ff6384 0% 17%,     /* Math: 85% of 100, or 17% of total marks */
+        #36a2eb 17% 33%,    /* Science: 78% of 100, or 16% of total marks */
+        #ffce56 33% 51%,    /* History: 92% of 100, or 18% of total marks */
+        #4bc0c0 51% 64%,    /* English: 67% of 100, or 13% of total marks */
+        #9966ff 64% 82%     /* Computer Science: 90% of 100, or 18% of total marks */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-weight: bold;
+    color: #333;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+/* Assigned Teachers Section Styles */
+#assigned-teachers-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#assigned-teachers-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.assigned-teachers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.assigned-teachers-table th, .assigned-teachers-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.assigned-teachers-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.assigned-teachers-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.assigned-teachers-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.assigned-teachers-table td a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.assigned-teachers-table td a:hover {
+    text-decoration: underline;
+}
+/* Fees Due Section Styles */
+#fees-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#fees-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#fees-content p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+#fees-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#fees-content .button:hover {
+    background-color: #45a049;
+}
+/* General Section Styles */
+.content-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Specific Section Styles for Important Announcements */
+#announcements-content {
+    background-color: #e7f7f7;
+}
+
+#announcements-content p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Specific Section Styles for Curricular Activities */
+#activities-content {
+    background-color: #f0f8ff;
+}
+
+#activities-content p {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Specific Section Styles for Contact Information */
+/* Updated Section Styles for Contact Information */
+#contacts-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contacts-content p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+#contacts-content p strong {
+    color: #4CAF50;
+}
+
+/* Social Media Links */
+#contacts-content .social-media-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contacts-content .social-media-links li {
+    margin: 5px 0;
+}
+
+#contacts-content .social-media-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#contacts-content .social-media-links a:hover {
+    text-decoration: underline;
+}
+
+/* Styling the contact address */
+#contacts-content p strong + span {
+    color: #555;
+}
+
+/* Adding some spacing */
+#contacts-content p {
+    line-height: 1.6;
+}
+
+
+
+
+

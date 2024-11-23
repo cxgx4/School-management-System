@@ -1,0 +1,71 @@
+/* General Button Styles */
+.button {
+    display: inline-block;
+    background-color: #181717;
+    color: #ffc00c;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #4f2323;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Form Group Styles for Input Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Form Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Heading Style */
+h2 {
+    color: #ffc00c;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+/* Input Field Styling */
+input {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Button Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
